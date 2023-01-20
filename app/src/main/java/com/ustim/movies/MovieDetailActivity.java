@@ -113,10 +113,6 @@ public class MovieDetailActivity extends AppCompatActivity {
                 }
             }
         });
-        MovieDao movieDao = MovieDataBase.getInstance(getApplication()).movieDao();
-        movieDao.insertMovie(movie)
-                .subscribeOn(Schedulers.io())
-                .subscribe();
     }
 
     private void initViews() {
